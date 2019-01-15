@@ -31,8 +31,8 @@ function draw() {
 
 function ballMove() {
 
-	ax = accelerationX;
-	ay = accelerationY;
+	ax = rotationX;
+	ay = rotationY;
 
 	vx = vx + ay;
 	vy = vy + ax;
