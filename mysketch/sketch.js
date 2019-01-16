@@ -18,6 +18,8 @@ var ay = 0;
 var vMultiplier = 0.007;
 var bMultiplier = 0.6;
 
+var toggleDist = new Nexus.Toggle('#dist');
+
 function setup() {
     createCanvas(displayWidth, displayHeight);
     fill(0);
