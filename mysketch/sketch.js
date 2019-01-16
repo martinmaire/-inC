@@ -33,8 +33,31 @@ function draw() {
     ellipse(x, y, 30, 30);
 	
 	
-	var person = {age: 45};
-gui.add(person, 'age', 0, 100);
+	switch(shape) {
+
+		  case 'circle':
+		    ellipse(x, y, d, d);
+		    break;
+
+		  case 'square':
+		    rectMode(CENTER);
+		    rect(x, y, d, d);
+		    break;
+
+		  case 'triangle':
+		    ngon(3, x, y, d);
+		    break;
+
+		  case 'pentagon':
+		    ngon(5, x, y, d);
+		    break;
+
+		  case 'star':
+		    star(6, x, y, d/sqrt(3), d);
+		    break;
+
+		}
+
 }
 
 function ballMove() {
