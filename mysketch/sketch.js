@@ -2,7 +2,12 @@
  * @name Acceleration Ball Bounce
  * @description Move an ellipse around based on accelerationX and accelerationY values, and bounces when touch the edge of the canvas.
  */
-
+var filterFreq = new Nexus.Slider('#filterfreq', {
+  "min" : 20,
+  "max" : 20000,
+  "step" : 20,
+  "value" : 1000,
+})
 // Position Variables
 var x = 0;
 var y = 0;
