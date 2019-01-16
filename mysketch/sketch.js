@@ -2,9 +2,7 @@
  * @name Acceleration Ball Bounce
  * @description Move an ellipse around based on accelerationX and accelerationY values, and bounces when touch the edge of the canvas.
  */
-var gui = createGui('P5 GUI');
-  gui.addGlobals('numShapes', 'bigRadius', 'shape', 'label', 'radius',
-  'drawFill', 'fillColor', 'drawStroke', 'strokeColor', 'strokeWidth');
+
 // Position Variables
 var x = 0;
 var y = 0;
@@ -25,6 +23,12 @@ var bMultiplier = 0.6;
 function setup() {
     createCanvas(displayWidth, displayHeight);
     fill(0);
+  
+	
+  button = createButton('click me');
+  button.position(19, 19);
+  button.mousePressed(changeBG);
+}
 }
 
 function draw() {
@@ -33,30 +37,7 @@ function draw() {
     ellipse(x, y, 30, 30);
 	
 	
-	switch(shape) {
-
-		  case 'circle':
-		    ellipse(x, y, d, d);
-		    break;
-
-		  case 'square':
-		    rectMode(CENTER);
-		    rect(x, y, d, d);
-		    break;
-
-		  case 'triangle':
-		    ngon(3, x, y, d);
-		    break;
-
-		  case 'pentagon':
-		    ngon(5, x, y, d);
-		    break;
-
-		  case 'star':
-		    star(6, x, y, d/sqrt(3), d);
-		    break;
-
-		}
+	
 
 }
 
