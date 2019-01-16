@@ -2,8 +2,7 @@
  * @name Acceleration Ball Bounce
  * @description Move an ellipse around based on accelerationX and accelerationY values, and bounces when touch the edge of the canvas.
  */
-var person = {age: 45};
-gui.add(person, 'age', 0, 100);
+
 // Position Variables
 var x = 0;
 var y = 0;
@@ -30,6 +29,10 @@ function draw() {
     background(255);
     ballMove();
     ellipse(x, y, 30, 30);
+	
+	
+	var person = {age: 45};
+gui.add(person, 'age', 0, 100);
 }
 
 function ballMove() {
