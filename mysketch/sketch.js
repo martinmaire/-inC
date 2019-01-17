@@ -48,7 +48,7 @@ function draw() {
  
   background(255);
   strokeWeight(20);
- soundVolume = map(rotationY, 0, 80, 0, 1);
+ soundVolume = map(abs(rotationY), 0, 80, 0, 1);
  line(20, 300, constrain((rotationY*3), 20, 300), 300)
   text("rotationZ: " + nf(rotationY, 0, 2), 20, 320);
   
@@ -56,7 +56,7 @@ function draw() {
   
   var volume = map(abs(rotationY), 0, 200, 0, 2);
   volume = constrain(volume, 0, 1);
-  monSon.amp(volume, 0.03);
+  monSon.amp(volume, 0.09);
   
 }
 
